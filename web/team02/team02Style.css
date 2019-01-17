@@ -1,0 +1,19 @@
+#div-1 {
+    background-color: red;
+}
+
+#div-2 {
+    background-color: blue;
+}
+
+#div-3 {
+    background-color: green;
+}
+
+.divs {
+    font-size: 20px;
+}
+
+.divs:hover {
+    font-weight: bold;
+}

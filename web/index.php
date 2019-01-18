@@ -7,7 +7,7 @@
   <title>Document</title>
 </head>
 <body>
-  
+  This is a test
 </body>
 </html>
 <?php

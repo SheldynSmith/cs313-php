@@ -17,7 +17,11 @@ CREATE TABLE characterSheets (
     id SERIAL PRIMARY KEY,
     userID INT REFERENCES userTable(id),
     campaign VARCHAR(80),
-    jsonString TEXT
+    jsonString TEXT,
+    characterName VARCHAR(80),
+    characterClass VARCHAR(80),
+    characterLevel INT,
+    characterRace VARCHAR(80)
 );
 
 SELECT * FROM userTable;

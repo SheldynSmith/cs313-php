@@ -24,7 +24,7 @@
     echo 'Error!: ' . $ex->getMessage();
     die();
   }
-  foreach ($db->query('SELECT id,book,chapter,verse,content FROM scripture WHERE book=\'.$book\'') as $row)
+  foreach ($db->query("SELECT id,book,chapter,verse,content FROM scripture WHERE book='$book'") as $row)
   {
     echo '<a href="scriptureDetail.php?id=$row["id"]"><strong>'. $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'].  '</strong></a>';
     echo '<br/>';

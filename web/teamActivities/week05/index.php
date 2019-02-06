@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <header> Scripture Resources </header>
+
 <body>
-<?php
+    <?php
   try
   {
     $dbUrl = getenv('DATABASE_URL');
   
     $dbOpts = parse_url($dbUrl);
-  
+    $book = $_GET["book"];
     $dbHost = $dbOpts["host"];
     $dbPort = $dbOpts["port"];
     $dbUser = $dbOpts["user"];
@@ -23,11 +24,12 @@
     echo 'Error!: ' . $ex->getMessage();
     die();
   }
-  foreach ($db->query('SELECT book,chapter,verse,content FROM scripture') as $row)
+  foreach ($db->query('SELECT book,chapter,verse,content FROM scripture WHERE book='.$book) as $row)
   {
     echo '<strong>'. $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'].  '</strong> - ' . $row['content'];
     echo '<br/>';
   }
 ?>
 </body>
+
 </html>

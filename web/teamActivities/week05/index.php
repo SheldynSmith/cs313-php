@@ -25,7 +25,7 @@
   }
   foreach ($db->query('SELECT book,chapter,verse,content FROM scripture') as $row)
   {
-    echo '<strong>'. $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'].  '</strong> ';
+    echo '<strong>'. $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'].  '</strong> - ' . $row['content'];
     echo '<br/>';
   }
 ?>

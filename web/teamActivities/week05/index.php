@@ -23,7 +23,7 @@
     echo 'Error!: ' . $ex->getMessage();
     die();
   }
-  foreach ($db->query('SELECT book,chapter,verse,content FROM scriptures') as $row)
+  foreach ($db->query('SELECT book,chapter,verse,content FROM scripture') as $row)
   {
     echo '<strong>'. $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'].  '</strong> ';
     echo '<br/>';

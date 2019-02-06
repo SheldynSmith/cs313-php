@@ -26,7 +26,7 @@
   }
   foreach ($db->query("SELECT id,book,chapter,verse,content FROM scripture WHERE book='$book'") as $row)
   {
-    echo '<a href="scriptureDetails.php?id=$row["id"]"><strong>'. $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'].  '</strong></a>';
+    echo '<a href="scriptureDetails.php?id='.$row["id"].'"><strong>'. $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'].  '</strong></a>';
     echo '<br/>';
   }
 ?>

@@ -24,11 +24,11 @@ $stats = json_decode($jsonString, false);
     <form>
         <div id="general" class="stat-section">
             <h2>General</h2>
-            <div id="character-name" class="stat-container" value="<?php $row["charactername"]?>">
+            <div id="character-name" class="stat-container" value="<?php echo $row["charactername"]?>">
                 <label>Character name</label><br>
                 <input type="text" name="character-name">
             </div>
-            <div id="alignment" class="stat-container" value="<?php $stats->{"alignment"}?>">
+            <div id="alignment" class="stat-container" value="<?php echo $stats->{"alignment"}?>">
                 <label>Alignment</label><br>
                 <input type="text" name="alignment">
             </div>
@@ -75,7 +75,7 @@ $stats = json_decode($jsonString, false);
             </div>
             <div id="race" class="stat-container">
                 <label>Race</label><br>
-                <input type="text" name="race" value="<?php $stats->{"race"}?>">
+                <input type="text" name="race" value="<?php echo $stats->{"race"}?>">
             </div>
             <div id="size" class="stat-container">
                 <label>Size</label><br>

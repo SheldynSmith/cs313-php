@@ -7,7 +7,7 @@ $statement->execute();
 
 $row = $statement->fetch(PDO::FETCH_ASSOC);
 $jsonString = $row["jsonstring"];
-$stats = json_decode($jsonString);
+$stats = json_decode($jsonString, false);
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +28,7 @@ $stats = json_decode($jsonString);
                 <label>Character name</label><br>
                 <input type="text" name="character-name">
             </div>
-            <div id="alignment" class="stat-container" value="<?php $stats["alignment"]?>">
+            <div id="alignment" class="stat-container" value="<?php $stats->{"alignment"}?>">
                 <label>Alignment</label><br>
                 <input type="text" name="alignment">
             </div>
@@ -75,7 +75,7 @@ $stats = json_decode($jsonString);
             </div>
             <div id="race" class="stat-container">
                 <label>Race</label><br>
-                <input type="text" name="race" value="<?php $stats["race"]?>">
+                <input type="text" name="race" value="<?php $stats->{"race"}?>">
             </div>
             <div id="size" class="stat-container">
                 <label>Size</label><br>

@@ -2,7 +2,7 @@
 require "dbConnect.php";
 $db = get_db();
 $userName = "testUser";
-$statement = $db->prepare("SELECT jsonstring, charactername FROM charactersheets cs, usertable ut WHERE cs.userid = ut.id, ut.username = '$userName'");
+$statement = $db->prepare("SELECT jsonstring, charactername FROM charactersheets cs, usertable ut WHERE cs.userid = ut.id AND ut.username = '$userName'");
 $statement->execute();
 
 $row = $statement->fetch(PDO::FETCH_ASSOC);

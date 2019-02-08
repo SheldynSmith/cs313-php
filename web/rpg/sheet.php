@@ -24,13 +24,13 @@ $stats = json_decode($jsonString, false);
     <form>
         <div id="general" class="stat-section">
             <h2>General</h2>
-            <div id="character-name" class="stat-container" value="<?php echo $row["charactername"]?>">
+            <div id="character-name" class="stat-container">
                 <label>Character name</label><br>
-                <input type="text" name="character-name">
+                <input type="text" name="character-name" value="<?php echo $row["charactername"]?>">
             </div>
-            <div id="alignment" class="stat-container" value="<?php echo $stats->{"alignment"}?>">
+            <div id="alignment" class="stat-container">
                 <label>Alignment</label><br>
-                <input type="text" name="alignment">
+                <input type="text" name="alignment" value="<?php echo $stats->{"alignment"}?>">
             </div>
             <div id="player-name" class="stat-container">
                 <label>Player Name</label><br>

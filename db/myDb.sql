@@ -27,3 +27,7 @@ CREATE TABLE characterSheets (
 SELECT * FROM userTable;
 
 SELECT * FROM characterSheets;
+
+INSERT INTO charactersheets (userid, jsonstring, charactername)
+  VALUES (2, '{"character-name":"Retoll", "alignment":"CN", "race":"Half-Orc"}', 'Retoll');
+

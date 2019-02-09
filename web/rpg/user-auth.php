@@ -18,7 +18,7 @@ $passwdIsVerified = password_verify($password, $passwordHash);
 if($userName == $storedUserName && $passwdIsVerified) {
     $_SESSION["verified"] = TRUE;
     $_SESSION["username"] = $userName;
-    header("Location: sheet.php");
+    header("Location: user-home.php");
     exit;
 }
 else {

@@ -31,8 +31,10 @@ $statement->execute();
     <h3>Characters</h3>
     <ul>
         <?php
+            echo "made it here";
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                 $charName = $row["charactername"];
+                echo $charName;
                 $charClass = $row["characterclass"];
                 $level = $row["characterlevel"];
                 $charRace = $row["characterrace"];

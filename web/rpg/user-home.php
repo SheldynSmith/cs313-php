@@ -33,6 +33,7 @@ $statement->execute();
         <?php
             echo "made it here";
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                echo "in loop";
                 $charName = $row["charactername"];
                 echo $charName;
                 $charClass = $row["characterclass"];

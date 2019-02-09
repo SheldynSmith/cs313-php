@@ -1,8 +1,10 @@
 <?php
-if(session_id == "" || !isset($_SESSION)) {
-    session_start();
+// if(!isset($_SESSION)) {
+session_start();
+if(!$_SESSION["retryLogin"]) {
     $_SESSION["verified"] = FALSE;
     $_SESSION["username"] = NULL;
+    $_SESSION["retryLogin"] = FALSE;
 }
 ?>
 
@@ -22,9 +24,9 @@ if(session_id == "" || !isset($_SESSION)) {
         <input type="text" name="username"><br>
         <label>Password:</label><br>
         <input type="password" name="password"><br>
-        <input type="submit"><br>
+        <input type="submit" name="submit" value="Sign In"><br>
         <?php
-            if($_SESSION["retryLogin"]) {
+            if($_SESSION["retryLogin"] == TRUE) {
                 echo "<span style=\"color: red\">Username and password did not match</span>";
             }
         ?>

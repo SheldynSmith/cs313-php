@@ -9,6 +9,9 @@ if(!$_SESSION["verified"]) {
 }
 
 require "dbConnect.php";
+
+$userName = $_SESSION["username"];
+
 $db = get_db();
 $statement = $db->prepare("SELECT charactername, characterclass, characterlevel, characterrace, cs.id
                            FROM charactersheets cs, usertable ut 

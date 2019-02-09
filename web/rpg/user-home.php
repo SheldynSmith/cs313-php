@@ -33,15 +33,15 @@ $statement->execute();
         <?php
             echo "made it here";
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                echo "in loop";
-                $charName = $row["charactername"];
-                echo $charName;
-                $charClass = $row["characterclass"];
-                $level = $row["characterlevel"];
-                $charRace = $row["characterrace"];
-                $id = $row["id"];
+                echo "<li>in loop";
+                // $charName = $row["charactername"];
+                // echo $charName;
+                // $charClass = $row["characterclass"];
+                // $level = $row["characterlevel"];
+                // $charRace = $row["characterrace"];
+                // $id = $row["id"];
 
-                echo "<li><a href=\"sheet.php?id=$id>View</a> $charName the level $level $charRace $charClass</li>";
+                // echo "<li><a href=\"sheet.php?id=$id>View</a> $charName the level $level $charRace $charClass</li>";
             }
             echo "</ul>";
         ?>

@@ -1,7 +1,7 @@
 <?php
 session_start();
-$_SESSION["firstAttempt"] = TRUE;
 $_SESSION["verified"] = FALSE;
+$_SESSION["username"] = NULL;
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ $_SESSION["verified"] = FALSE;
         <input type="password" name="password"><br>
         <input type="submit"><br>
         <?php
-            if(!$_SESSION["firstAttempt"]) {
+            if($_SESSION["retryLogin"]) {
                 echo "<span style=\"color: red\">Username and password did not match</span>";
             }
         ?>

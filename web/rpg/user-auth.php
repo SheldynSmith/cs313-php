@@ -17,5 +17,13 @@ $passwdIsVerified = password_verify($password, $passwordHash);
 if($userName == $storedUserName && $passwdIsVerified) {
     $_SESSION["verified"] = TRUE;
     $_SESSION["username"] = $userName;
-    echo "User is verified";
+    header("Location: sheet.php");
+    exit;
+}
+else {
+    $_SESSION["verified"] = FALSE;
+    $_SESSION["username"] = NULL;
+    $_SESSION["retryLogin"] = TRUE;
+    header("Location: login.php");
+    exit;
 }

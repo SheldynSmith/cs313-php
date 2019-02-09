@@ -34,7 +34,6 @@ $statement->execute();
     <h3>Characters</h3>
     <ul>
         <?php
-            echo "made it here";
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                 $charName = $row["charactername"];
                 $charClass = $row["characterclass"];
@@ -42,7 +41,7 @@ $statement->execute();
                 $charRace = $row["characterrace"];
                 $id = $row["id"];
 
-                echo "<li><a href=\"sheet.php?id=$id>View</a> $charName the level $level $charRace $charClass</li>";
+                echo "<li><a href=\"sheet.php?id=$id\">View</a> $charName the level $level $charRace $charClass</li>";
             }
             echo "</ul>";
         ?>

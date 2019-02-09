@@ -40,7 +40,7 @@ $statement->execute();
 
                 echo "<li><a href=\"sheet.php?id=$id>View</a> $charName the level $level $charRace $charClass</li>";
             }
-            echo "</li>";
+            echo "</ul>";
         ?>
 </body>
 </html>

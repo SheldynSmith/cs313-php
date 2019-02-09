@@ -1,7 +1,9 @@
 <?php
-session_start();
-$_SESSION["verified"] = FALSE;
-$_SESSION["username"] = NULL;
+if(session_id == "" || !isset($_SESSION)) {
+    session_start();
+    $_SESSION["verified"] = FALSE;
+    $_SESSION["username"] = NULL;
+}
 ?>
 
 <!DOCTYPE html>

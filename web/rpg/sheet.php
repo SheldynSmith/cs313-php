@@ -57,7 +57,7 @@ $stats = json_decode($jsonString, false);
                         for ($i = 1; $i <= 20; $i++) {
                             echo "<option value=\"$i\"";
                             if($i == $row["characterlevel"]) {
-                                echo " selected=\"selected\"";
+                                echo " selected";
                             }
                             echo ">$i</option>";
                         }

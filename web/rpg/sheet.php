@@ -1,9 +1,18 @@
 <?php
 session_start();
+if(!$_SESSION["verified"]) {
+    $_SESSION["username"] = NULL;
+    $_SESSION["retryLogin"] = FALSE;
+    header("Location: login.php");
+    exit;
+}
+
 require "dbConnect.php";
 $db = get_db();
-$userName = "testUser";
-$statement = $db->prepare("SELECT jsonstring, charactername FROM charactersheets cs, usertable ut WHERE cs.userid = ut.id AND ut.username = '$userName'");
+$userName = $_SESSION["username"];
+$characterID = $_GET['id'];
+$statement = $db->prepare("SELECT jsonstring, charactername FROM charactersheets cs, usertable ut 
+                           WHERE cs.userid = ut.id AND ut.username = '$userName' AND cs.id = $characterID");
 $statement->execute();
 
 $row = $statement->fetch(PDO::FETCH_ASSOC);

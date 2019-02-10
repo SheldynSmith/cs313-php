@@ -11,7 +11,7 @@ require "dbConnect.php";
 $db = get_db();
 $userName = $_SESSION["username"];
 $characterID = $_GET['id'];
-$statement = $db->prepare("SELECT jsonstring, charactername FROM charactersheets cs, usertable ut 
+$statement = $db->prepare("SELECT jsonstring, charactername, characterlevel FROM charactersheets cs, usertable ut 
                            WHERE cs.userid = ut.id AND ut.username = '$userName' AND cs.id = $characterID");
 $statement->execute();
 

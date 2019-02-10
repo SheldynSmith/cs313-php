@@ -31,3 +31,6 @@ SELECT * FROM characterSheets;
 INSERT INTO charactersheets (userid, jsonstring, charactername)
   VALUES (2, '{"character-name":"Retoll", "alignment":"CN", "race":"Half-Orc"}', 'Retoll');
 
+INSERT INTO charactersheets (userid, jsonstring, charactername, characterclass, characterlevel, characterrace)
+  VALUES (2, '{"character-name":"Boric Riverstride", "alignment":"CG", "race":"Human"}', 'Boric Riverstride', 'Fighter', 1, 'Human');
+

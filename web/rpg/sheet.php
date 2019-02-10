@@ -61,6 +61,7 @@ $stats = json_decode($jsonString, false);
                             }
                             echo ">$i</option>";
                         }
+                    ?>
                     // <option value="1">1</option>
                     // <option value="2">2</option>
                     // <option value="3">3</option>

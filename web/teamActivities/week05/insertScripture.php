@@ -27,7 +27,7 @@
     $verse = $_POST["verse"];
     $content = $_POST["content"];
     $topics = $_POST["topic"];
-    echo "$topics";
+    echo "$topic";
 
     $statement = $db->prepare("INSERT INTO Scripture (Book, Chapter, Verse, Content) VALUES (:book, :chapter, :verse, :content);");
     $statement->execute(array('book' => $book, 'chapter' =>$chapter, 'verse' => $verse, 'content' => $content));
@@ -38,7 +38,7 @@
     foreach ($topics as $topic){ 
         //insert query inside ScriptureTopic for each flagged topic
         $topicId = $topic["id"];
-        $statement = $db->prepare("INSERT INTO ScriptureTopic (IDTopic, IDScripture) VALUES (':ID, :IDScripture");
+        $statement = $db->prepare("INSERT INTO ScriptureTopic (IDTopic, IDScripture) VALUES (':IDTopic, :IDScripture");
         $statement->bindValue(':IDScripture', $lastId);
 		$statement->bindValue(':IDTopic', $topicId);
         $statement.execute();

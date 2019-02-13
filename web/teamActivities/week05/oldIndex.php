@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <header> Scripture Resources </header>
+
 <body>
-<?php
+    <?php
   try
   {
     $dbUrl = getenv('DATABASE_URL');
-  
     $dbOpts = parse_url($dbUrl);
-    $scripture = $_GET["id"];
+    $book = $_GET["book"];
+    $id = $_GET["id"];
     $dbHost = $dbOpts["host"];
     $dbPort = $dbOpts["port"];
     $dbUser = $dbOpts["user"];
@@ -23,10 +24,12 @@
     echo 'Error!: ' . $ex->getMessage();
     die();
   }
-  $stmt = $db->prepare('SELECT * FROM Scripture WHERE id=:id');
-  $stmt->execute(array(':id' => $scripture));
-  $row = $stmt->fetch(PDO::FETCH_ASSOC);
-  echo '<strong>'. $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'].  '</strong> - ' . $row['content'];
-  ?>
+  foreach ($db->query("SELECT id,book,chapter,verse,content FROM scripture WHERE book='$book'") as $row)
+  {
+    echo '<a href="scriptureDetails.php?id='.$row["id"].'"><strong>'. $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'].  '</strong></a>';
+    echo '<br/>';
+  }
+?>
 </body>
+
 </html>

@@ -43,9 +43,8 @@
 		$statement->bindValue(':IDTopic', $topicId);
         $statement.execute();
 
-    }
-}
-    catch (PDOException $ex)
+        }
+    } catch (PDOException $ex)
         {
         echo 'Error!: ' . $ex->getMessage();
         die();

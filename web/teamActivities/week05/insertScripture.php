@@ -1,4 +1,10 @@
-<?php
+<!DOCTYPE html>
+<html>
+<header> Scripture Resources </header>
+
+<body>
+
+    <?php
     try
     {
     $dbUrl = getenv('DATABASE_URL');
@@ -35,10 +41,32 @@
 
     }
 }
-catch (PDOException $ex)
-    {
-    echo 'Error!: ' . $ex->getMessage();
-    die();
+    catch (PDOException $ex)
+        {
+        echo 'Error!: ' . $ex->getMessage();
+        die();
+        }
+
+$statement = $db->prepare('SELECT Scripture.book, Scripture.chapter, Scripture.verse, Scripture.content, Topic.name
+                      FROM ScriptureTopic As ST
+                      ON Scripture AS S WHERE ST.IDScripture=S.ID
+                      ON Topic As T WHERE ST.IDTopic = T.ID');
+
+    //$statement = $db->prepare('SELECT id, book, chapter, verse, content FROM scripture');
+    $statement->execute();
+
+    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+        $dbBook = $row["book"];
+        $dbChapter = $row["chapter"];
+        $dbVerse = $row["verse"];
+        $dbTopic = $row["name"];
+        $dbContent = $row["content"];
+        echo "Topic: $dbTopic<br>";
+        echo " $dbBook $dbChapter:$dbVerse<br>";
+        echo " $dbContent<br><br>";
     }
 ?>
 
+</body>
+
+</html>

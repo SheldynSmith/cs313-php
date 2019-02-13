@@ -20,12 +20,15 @@
     $chapter = $_POST["chapter"];
     $verse = $_POST["verse"];
     $content = $_POST["content"];
+    $topics = $_POST["topic"];
 
     $statement = $db->prepare("INSERT INTO Scripture (Book, Chapter, Verse, Content) VALUES (:book, :chapter, :verse, :content);");
     $statement->execute(array('book' => $book, 'chapter' =>$chapter, 'verse' => $verse, 'content' => $content));
     $statement = $db->lastInsertId('scripture_Id_seq');
 
-    foreach ($topic as $topics){ 
+    
+
+    foreach ($topics as $topic){ 
         //insert query inside ScriptureTopic for each flagged topic
         $topicid = $topic["id"];
         $statement = $db->prepare("INSERT INTO ScriptureTopics (IDTopic, IDScripture) VALUES ('$topicid,$newid");

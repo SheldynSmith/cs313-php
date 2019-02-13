@@ -38,6 +38,7 @@
         //insert query inside ScriptureTopic for each flagged topic
         $topicid = $topic["id"];
         $statement = $db->prepare("INSERT INTO ScriptureTopics (IDTopic, IDScripture) VALUES ('$topicid,$newid");
+        $statement.execute();
 
     }
 }

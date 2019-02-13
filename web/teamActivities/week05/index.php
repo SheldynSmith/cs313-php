@@ -27,17 +27,23 @@
            $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
          
            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+         
+
+         $statement = $db->prepare('SELECT id, name FROM topic');
+         $statement->execute();  
+         // Go through each result
+         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+         {
+           echo '<input type="checkbox" name="topic[]" value="'.$row["id"].'">'.$row["name"];
+           echo '<br/>';
          }
+        }
          catch (PDOException $ex)
          {
            echo 'Error!: ' . $ex->getMessage();
            die();
          }
-         foreach ($db->query("SELECT * FROM Topics") as $row)
-         {
-           echo '<input type="checkbox" name="topic[]" value="'.$row["id"].'">'.$row["name"];
-           echo '<br/>';
-         }
+
          ?>
     </form>
 </body>

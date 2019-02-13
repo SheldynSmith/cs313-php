@@ -21,14 +21,9 @@
     $verse = $_POST["verse"];
     $content = $_POST["content"];
 
-    $statement = $db->prepare("INSERT INTO Scripture (Book, Chapter, Verse, Content) VALUES ('$book, $chapter, $verse, $content");
-        //insert query into Scripture 
-    if ($db->query($statement) !== TRUE) {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-    $topics = $_POST['topic'];
-    
-    $newId = $db->lastInsertId('scripture_Id_seq');
+    $statement = $db->prepare("INSERT INTO Scripture (Book, Chapter, Verse, Content) VALUES (:book, :chapter, :verse, :content);");
+    $statement->execute(array('book' => $book, 'chapter' =>$chapter, 'verse' => $verse, 'content' => $content));
+    $statement = $db->lastInsertId('scripture_Id_seq');
 
     foreach ($topic as $topics){ 
         //insert query inside ScriptureTopic for each flagged topic

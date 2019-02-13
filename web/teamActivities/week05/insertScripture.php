@@ -23,7 +23,7 @@
 
     $statement = $db->prepare("INSERT INTO Scripture (Book, Chapter, Verse, Content) VALUES ('$book, $chapter, $verse, $content");
         //insert query into Scripture 
-    if ($conn->query($statement) !== TRUE) {
+    if ($db->query($statement) !== TRUE) {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
     $topics = $_POST['topic'];

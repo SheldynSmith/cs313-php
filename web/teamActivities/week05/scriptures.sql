@@ -27,3 +27,9 @@ CREATE TABLE ScriptureTopic (
     IDScripture INT NOT NULL REFERENCES Scripture(ID)
 );
 
+SELECT Scripture.book, Scripture.chapter, Scripture.verse, Scripture,content, Topic.name
+FROM ScriptureTopic AS ST
+ON Scripture AS S WHERE ST.IDScripture=S.ID
+ON Topic AS T WHERE ST.IDTopic = T.ID;
+
+

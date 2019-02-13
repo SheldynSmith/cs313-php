@@ -36,7 +36,7 @@
 
     foreach ($topics as $topic){ 
         //insert query inside ScriptureTopic for each flagged topic
-        $topicid = $topic["id"];
+        $topicId = $topic["id"];
         $statement = $db->prepare("INSERT INTO ScriptureTopic (IDTopic, IDScripture) VALUES (':IDtopic, :IDScripture");
         $statement->bindValue(':IDScripture', $lastId);
 		$statement->bindValue(':IDTopic', $topicId);

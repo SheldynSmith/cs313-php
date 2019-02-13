@@ -11,7 +11,7 @@
         Verse:<br>
         <input type="text" name="verse"><br>
         <textarea cols="40" name="content"></textarea><br>
-        <input type="submit" value="send">
+        
         <?php
          try
          {
@@ -43,8 +43,9 @@
            echo 'Error!: ' . $ex->getMessage();
            die();
          }
-
          ?>
+         <br>
+         <input type="submit" value="send">
     </form>
 </body>
 </html>

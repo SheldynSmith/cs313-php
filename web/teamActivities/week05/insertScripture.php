@@ -28,7 +28,7 @@
     }
     $topics = $_POST['topic'];
     
-    $newId = $db->lastInsertId('scripture_scriptureId_seq');
+    $newId = $db->lastInsertId('scripture_Id_seq');
 
     foreach ($topic as $topics){ 
         //insert query inside ScriptureTopic for each flagged topic

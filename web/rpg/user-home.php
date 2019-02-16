@@ -17,7 +17,6 @@ $statement = $db->prepare("SELECT charactername, characterclass, characterlevel,
                            FROM charactersheets cs, usertable ut 
                            WHERE ut.username = '$userName' AND cs.userid = ut.id");
 $statement->execute();
-
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +29,7 @@ $statement->execute();
 </head>
 <body>
     <h1>Pathfinder Character Sheets</h1>
-    <h2>Welcome <?php echo $_SESSION["username"]?></h2>
+    <h2>Welcome <?php echo htmlspecialchars($_SESSION["username"])?></h2>
     <h3>Characters</h3>
     <ul>
         <?php

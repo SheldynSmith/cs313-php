@@ -7,6 +7,7 @@ if(!$_SESSION["verified"]) {
     header("Location: login.php");
     exit;
 }
+$_SESSION["characterID"] = NULL;
 
 require "dbConnect.php";
 

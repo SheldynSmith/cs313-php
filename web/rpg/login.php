@@ -1,11 +1,11 @@
 <?php
-// if(!isset($_SESSION)) {
 session_start();
 if(!$_SESSION["retryLogin"]) {
     $_SESSION["verified"] = FALSE;
     $_SESSION["username"] = NULL;
     $_SESSION["retryLogin"] = FALSE;
 }
+$_SESSION["characterID"] = NULL;
 ?>
 
 <!DOCTYPE html>

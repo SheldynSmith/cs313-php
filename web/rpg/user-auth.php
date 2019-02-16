@@ -6,7 +6,8 @@ $db = get_db();
 $userName = $_POST["username"];
 $password = $_POST["password"];
 
-$statement = $db->prepare("SELECT username, passwordhash FROM usertable WHERE username = '$userName'");
+$statement = $db->prepare("SELECT username, passwordhash FROM usertable WHERE username = :cleanUsername");
+$statement->bindValue(":cleanUsername", $userName, PDO::PARAM_STR);
 $statement->execute();
 
 $row = $statement->fetch(PDO::FETCH_ASSOC);

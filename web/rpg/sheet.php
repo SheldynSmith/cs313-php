@@ -13,7 +13,7 @@ require "dbConnect.php";
 $db = get_db();
 $userName = $_SESSION["username"];
 $characterID = $_GET['id'];
-$statement = $db->prepare("SELECT jsonstring, charactername, characterlevel, ut.username FROM charactersheets cs, usertable ut 
+$statement = $db->prepare("SELECT jsonstring, charactername, ut.username FROM charactersheets cs, usertable ut 
                            WHERE cs.userid = ut.id AND ut.username = :cleanUsername AND cs.id = :cleanCharacterID");
 $statement->bindValue(":cleanUsername", $userName, PDO::PARAM_STR);
 $statement->bindValue(":cleanCharacterID", $characterID, PDO::PARAM_STR);
@@ -62,7 +62,7 @@ var_dump($row);
             </div>
             <div id="character-class" class="stat-container">
                 <label>Character Class</label><br>
-                <input type="text" name="character-class" value="<?php echo $row['characterclass']?>">               
+                <input type="text" name="character-class" value="<?php echo $stats->{"characterclass"}?>">               
             </div>
             <div id="level" class="stat-container">
                 <label>Level</label><br>
@@ -70,7 +70,7 @@ var_dump($row);
                     <?php
                         for ($i = 1; $i <= 20; $i++) {
                             echo "<option value=\"$i\"";
-                            if($i == $row["characterlevel"]) {
+                            if($i == $stats->{"level"}) {
                                 echo " selected";
                             }
                             echo ">$i</option>";

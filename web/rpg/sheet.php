@@ -12,7 +12,7 @@ if(!$_SESSION["verified"]) {
 require "dbConnect.php";
 $db = get_db();
 $userName = $_SESSION["username"];
-$characterID = $_GET['id'];
+$characterID = intval($_GET['id']);
 $statement = $db->prepare("SELECT jsonstring, charactername, characterlevel, ut.username FROM charactersheets cs, usertable ut 
                            WHERE cs.userid = ut.id AND ut.username = :cleanUsername AND cs.id = cleanCharacterID");
 $statement->bindValue(":cleanUsername", $userName, PDO::PARAM_STR);

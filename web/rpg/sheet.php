@@ -7,15 +7,21 @@ if(!$_SESSION["verified"]) {
     exit;
 }
 
+// make sure that the sheet belongs to the correct user
+
 require "dbConnect.php";
 $db = get_db();
 $userName = $_SESSION["username"];
 $characterID = $_GET['id'];
-$statement = $db->prepare("SELECT jsonstring, charactername, characterlevel FROM charactersheets cs, usertable ut 
+$statement = $db->prepare("SELECT jsonstring, charactername, characterlevel, ut.username FROM charactersheets cs, usertable ut 
                            WHERE cs.userid = ut.id AND ut.username = '$userName' AND cs.id = $characterID");
 $statement->execute();
 
 $row = $statement->fetch(PDO::FETCH_ASSOC);
+if ($row->rowCount() == 0){
+    echo "This character sheet does not belong to you";
+}
+
 $jsonString = $row["jsonstring"];
 $stats = json_decode($jsonString, false);
 ?>
@@ -31,7 +37,8 @@ $stats = json_decode($jsonString, false);
 </head>
 <body>
     <h1>Pathfinder Character Sheet</h1>
-    <form>
+    <form action="saveSheet.php" method="POST">
+        <input type="submit" id="save-sheet" value="Save">
         <div id="general" class="stat-section">
             <h2>General</h2>
             <div id="character-name" class="stat-container">

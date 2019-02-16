@@ -38,5 +38,4 @@ $statement->bindValue(":cleanRace", $cleanRace, PDO::PARAM_STR);
 $statement->bindValue(":cleanID", $characterID, PDO::PARAM_STR);
 $statement->execute();
 
-// update charactername, characterclass, characterlevel, and characterrace in db
 ?>

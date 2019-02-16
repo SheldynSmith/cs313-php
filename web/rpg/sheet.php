@@ -12,11 +12,11 @@ if(!$_SESSION["verified"]) {
 require "dbConnect.php";
 $db = get_db();
 $userName = $_SESSION["username"];
-$characterID = intval($_GET['id']);
+$characterID = $_GET['id'];
 $statement = $db->prepare("SELECT jsonstring, charactername, characterlevel, ut.username FROM charactersheets cs, usertable ut 
                            WHERE cs.userid = ut.id AND ut.username = :cleanUsername AND cs.id = cleanCharacterID");
 $statement->bindValue(":cleanUsername", $userName, PDO::PARAM_STR);
-$statement->bindValue(":cleanCharacterID", $characterID, PDO::PARAM_INT);
+$statement->bindValue(":cleanCharacterID", $characterID, PDO::PARAM_STR);
 $statement->execute();
 
 $row = $statement->fetch(PDO::FETCH_ASSOC);

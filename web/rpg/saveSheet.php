@@ -24,10 +24,10 @@ require ("dbConnect.php");
 $db = get_db();
 
 $statement = $db->prepare("UPDATE charactersheets
-                           SET jsonstring     = :cleanJson
-                               charactername  = :cleanName
-                               characterclass = :cleanClass
-                               characterlevel = :cleanLevel
+                           SET jsonstring     = :cleanJson,
+                               charactername  = :cleanName,
+                               characterclass = :cleanClass,
+                               characterlevel = :cleanLevel,
                                characterrace  = :cleanRace
                            WHERE id = :cleanID");
 $statement->bindValue(":cleanJson", $statsJSON, PDO::PARAM_STR);

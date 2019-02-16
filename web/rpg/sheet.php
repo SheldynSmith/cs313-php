@@ -62,7 +62,7 @@ var_dump($row);
             </div>
             <div id="character-class" class="stat-container">
                 <label>Character Class</label><br>
-                <input type="text" name="character-class" value="<?php echo $stats->{"characterclass"}?>">               
+                <input type="text" name="character-class" value="<?php echo $stats->{"character-class"}?>">               
             </div>
             <div id="level" class="stat-container">
                 <label>Level</label><br>

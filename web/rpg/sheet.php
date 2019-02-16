@@ -18,9 +18,7 @@ $statement = $db->prepare("SELECT jsonstring, charactername, characterlevel, ut.
 $statement->execute();
 
 $row = $statement->fetch(PDO::FETCH_ASSOC);
-if ($row->rowCount() == 0){
-    echo "This character sheet does not belong to you";
-}
+var_dump($row);
 
 $jsonString = $row["jsonstring"];
 $stats = json_decode($jsonString, false);

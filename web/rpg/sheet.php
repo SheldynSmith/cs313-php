@@ -30,6 +30,7 @@ else {
 
 $jsonString = $row["jsonstring"];
 $stats = json_decode($jsonString, false);
+var_dump($row);
 ?>
 
 <!DOCTYPE html>
@@ -61,8 +62,7 @@ $stats = json_decode($jsonString, false);
             </div>
             <div id="character-class" class="stat-container">
                 <label>Character Class</label><br>
-                <input type="text" name="character-class" value="<?php echo $row["characterclass"]?>">
-                
+                <input type="text" name="character-class" value="<?php echo $row['characterclass']?>">               
             </div>
             <div id="level" class="stat-container">
                 <label>Level</label><br>

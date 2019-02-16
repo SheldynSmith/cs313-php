@@ -19,8 +19,8 @@ $statement->execute();
 
 $row = $statement->fetch(PDO::FETCH_ASSOC);
 if ($row == false) {
-    echo "This character sheet does not belong to you."
-    die();
+    echo "This character sheet does not belong to you.";
+    die;
 }
 
 $jsonString = $row["jsonstring"];

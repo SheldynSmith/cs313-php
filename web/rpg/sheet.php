@@ -95,14 +95,14 @@ var_dump($row);
                 <select name="size">
                     <option value="Small"
                     <?php
-                    if($stats["size"] == "Small") {
+                    if($stats->{"size"} == "Small") {
                         echo "selected";
                     }
                     ?>
                     >Small</option>
                     <option value="Medium"
                     <?php
-                    if($stats["size"] == "Medium") {
+                    if($stats->{"size"} == "Medium") {
                         echo "selected";
                     }
                     ?>

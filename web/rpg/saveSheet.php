@@ -1,6 +1,13 @@
 <?php
 session_start();
 
+if(!$_SESSION["verified"]) {
+    $_SESSION["username"] = NULL;
+    $_SESSION["retryLogin"] = FALSE;
+    header("Location: login.php");
+    exit;
+}
+
 $sanitizedArray = array();
 foreach($_POST as $key => $value) {
     $cleanKey = htmlspecialchars($key);
@@ -14,7 +21,6 @@ $cleanName = $sanitizedArray["character-name"];
 $cleanClass = $sanitizedArray["character-class"];
 $cleanLevel = $sanitizedArray["level"];
 $cleanRace = $sanitizedArray["race"];
-
 
 require ("dbConnect.php");
 $db = get_db();

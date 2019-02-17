@@ -7,8 +7,6 @@ if(!$_SESSION["verified"]) {
     exit;
 }
 
-// make sure that the sheet belongs to the correct user
-
 require "dbConnect.php";
 $db = get_db();
 $userName = $_SESSION["username"];
@@ -19,6 +17,7 @@ $statement->bindValue(":cleanUsername", $userName, PDO::PARAM_STR);
 $statement->bindValue(":cleanCharacterID", $characterID, PDO::PARAM_STR);
 $statement->execute();
 
+// make sure that the sheet belongs to the correct user
 $row = $statement->fetch(PDO::FETCH_ASSOC);
 if ($row == false) {
     echo "This character sheet does not belong to you.";

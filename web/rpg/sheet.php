@@ -58,7 +58,7 @@ var_dump($row);
             </div>
             <div id="player-name" class="stat-container">
                 <label>Player Name</label><br>
-                <input type="text" name="player-name">
+                <input type="text" name="player-name" value="<?php echo $stats->{"player-name"}?>">
             </div>
             <div id="character-class" class="stat-container">
                 <label>Character Class</label><br>
@@ -80,11 +80,11 @@ var_dump($row);
             </div>
             <div id="deity" class="stat-container">
                 <label>Deity</label><br>
-                <input type="text" name="deity">
+                <input type="text" name="deity" value="<?php echo $stats->{"deity"}?>">
             </div>
             <div id="homeland" class="stat-container">
                 <label>Homeland</label><br>
-                <input type="text" name="homeland">
+                <input type="text" name="homeland"  value="<?php echo $stats->{"homeland"}?>">
             </div>
             <div id="race" class="stat-container">
                 <label>Race</label><br>
@@ -93,8 +93,20 @@ var_dump($row);
             <div id="size" class="stat-container">
                 <label>Size</label><br>
                 <select name="size">
-                    <option value="Small">Small</option>
-                    <option value="Medium">Medium</option>
+                    <option value="Small"
+                    <?php
+                    if($stats["size"] == "Small") {
+                        echo "selected";
+                    }
+                    ?>
+                    >Small</option>
+                    <option value="Medium"
+                    <?php
+                    if($stats["size"] == "Medium") {
+                        echo "selected";
+                    }
+                    ?>
+                    >Medium</option>
                 </select>
             </div>
             <div id="gender" class="stat-container">
@@ -106,23 +118,23 @@ var_dump($row);
             </div>
             <div id="age" class="stat-container">
                 <label>Age</label><br>
-                <input type="text" name="age">
+                <input type="text" name="age" value="<?php echo $stats->{"age"}?>">
             </div>
             <div id="Height" class="stat-container">
                 <label>Height</label><br>
-                <input type="text" name="height">
+                <input type="text" name="height" value="<?php echo $stats->{"height"}?>">
             </div>
             <div id="weight" class="stat-container">
                 <label>Weight</label><br>
-                <input type="text" name="weight">
+                <input type="text" name="weight" value="<?php echo $stats->{"weight"}?>">
             </div>
             <div id="hair" class="stat-container">
                 <label>Hair Color</label><br>
-                <input type="text" name="hair">
+                <input type="text" name="hair" value="<?php echo $stats->{"hair"}?>">
             </div>
             <div id="eyes" class="stat-container">
                 <label>Eye Color</label><br>
-                <input type="text" name="eyes">
+                <input type="text" name="eyes" value="<?php echo $stats->{"eyes"}?>">
             </div>
         </div> <!--general section-->
 

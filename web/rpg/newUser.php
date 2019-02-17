@@ -9,7 +9,7 @@
             var password1 = document.forms["sign-up"]["password"].value;
             var password2 = document.forms["sign-up"]["password-confirm"].value;
             var username = document.forms["sign-up"]["username"].value;
-            var warning = document.forms["sign-up"]["not-matched"];
+            var warning = document.getElementByID("not-matched");
 
             if(password1 !== password2) {
                 warning.visibility = "visible";
@@ -41,7 +41,7 @@
         <label>Confirm Password:</label><br>
         <input type="password" name="password-confirm"><br><br>
         <input type="submit" name="submit" value="Sign Up"><br><br>
-        <div name="not-matched" style="color:red" visibility="hidden"></div>
+        <div id="not-matched" style="color:red" visibility="hidden"></div>
     </form>
 </body>
 </html>

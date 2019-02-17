@@ -112,8 +112,20 @@ var_dump($row);
             <div id="gender" class="stat-container">
                 <label>Gender</label><br>
                 <select name="gender">
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
+                    <option value="Male"
+                    <?php
+                    if($stats->{"gender"} == "Male") {
+                        echo "selected";
+                    }
+                    ?>
+                    >Male</option>
+                    <option value="Female"
+                    <?php
+                    if($stats->{"gender"} == "Female") {
+                        echo "selected";
+                    }
+                    ?>
+                    >Female</option>
                 </select>
             </div>
             <div id="age" class="stat-container">

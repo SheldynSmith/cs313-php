@@ -29,7 +29,6 @@ else {
 
 $jsonString = $row["jsonstring"];
 $stats = json_decode($jsonString, false);
-var_dump($row);
 ?>
 
 <!DOCTYPE html>

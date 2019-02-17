@@ -14,7 +14,7 @@ require "dbConnect.php";
 $userName = $_SESSION["username"];
 
 $db = get_db();
-$statement = $db->prepare("INSERT INTO charactersheet (charactername)
+$statement = $db->prepare("INSERT INTO charactersheets (charactername)
                            VALUES ('New Character')");
 $statement->execute();
 

@@ -23,7 +23,7 @@ $_SESSION["characterID"] = NULL;
         <label>Username:</label><br>
         <input type="text" name="username"><br>
         <label>Password:</label><br>
-        <input type="password" name="password"><br>
+        <input type="password" name="password"><br><br>
         <input type="submit" name="submit" value="Sign In"><br>
         <?php
             if($_SESSION["retryLogin"] == TRUE) {
@@ -31,5 +31,6 @@ $_SESSION["characterID"] = NULL;
             }
         ?>
     </form>
+    <a href="newUser.php">Create a new account</a>
 </body>
 </html>

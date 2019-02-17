@@ -8,9 +8,22 @@
         function validateForm() {
             var password1 = document.forms["sign-up"]["password"].value;
             var password2 = document.forms["sign-up"]["password-confirm"].value;
+            var username = document.forms["sign-up"]["username"].value;
+            var warning = document.forms["sign-up"]["not-matched"];
 
             if(password1 !== password2) {
-                alert("Passwords do not match");
+                warning.visibility = "visible";
+                warning.innerHTML = "Passwords must be the same"
+                return false;
+            }
+            else if(username == "") {
+                warning.visibility = "visible";
+                warning.innerHTML = "Username must not be blank"
+                return false;
+            }
+            else if(password1 == "" || password2 == "") {
+                warning.visibility = "visible";
+                warning.innerHTML = "Password must not be blank"
                 return false;
             }
         }
@@ -22,13 +35,13 @@
     <h3>Enter a new username and password</h3>
     <form id="sign-up" method="POST" action="createUser.php" onsubmit="return validateForm()">
         <label>Username:</label><br>
-        <input type="text" name="username"><br>
+        <input type="text" name="username"><br><br>
         <label>Password:</label><br>
-        <input type="password" name="password"><br><br>
+        <input type="password" name="password"><br>
         <label>Confirm Password:</label><br>
         <input type="password" name="password-confirm"><br><br>
-        <input type="submit" name="submit" value="Sign Up"><br>
-        <div id="not-matched" style="">
+        <input type="submit" name="submit" value="Sign Up"><br><br>
+        <div name="not-matched" style="color:red" visibility="hidden"></div>
     </form>
 </body>
 </html>

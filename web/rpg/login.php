@@ -30,7 +30,7 @@ $_SESSION["characterID"] = NULL;
                 echo "<span style=\"color: red\">Username and password did not match</span>";
             }
         ?>
-    </form>
+    </form><br>
     <a href="newUser.php">Create a new account</a>
 </body>
 </html>

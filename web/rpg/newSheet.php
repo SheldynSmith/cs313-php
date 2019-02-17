@@ -12,10 +12,11 @@ $_SESSION["characterID"] = NULL;
 require "dbConnect.php";
 
 $userName = $_SESSION["username"];
+$userID = $_SESSION["userID"];
 
 $db = get_db();
-$statement = $db->prepare("INSERT INTO charactersheets (charactername)
-                           VALUES ('New Character')");
+$statement = $db->prepare("INSERT INTO charactersheets (userid, charactername)
+                           VALUES ($userID, 'New Character')");
 $statement->execute();
 
 header("Location: user-home.php");

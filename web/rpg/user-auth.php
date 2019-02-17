@@ -13,7 +13,7 @@ $statement->execute();
 $row = $statement->fetch(PDO::FETCH_ASSOC);
 $storedUserName = $row["username"];
 $passwordHash = $row["passwordhash"];
-$userID = $row["id"]
+$userID = $row["id"];
 
 $passwdIsVerified = password_verify($password, $passwordHash);
 

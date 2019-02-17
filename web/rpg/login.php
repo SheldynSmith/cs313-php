@@ -6,6 +6,7 @@ if(!$_SESSION["retryLogin"]) {
     $_SESSION["retryLogin"] = FALSE;
 }
 $_SESSION["characterID"] = NULL;
+$_SESSION["userID"] = NULL;
 ?>
 
 <!DOCTYPE html>

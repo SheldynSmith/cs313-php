@@ -1,6 +1,11 @@
+body {
+    background-image: url("http://charactersheet.co.uk/pathfinder/images/4e982ec8.bg-paper-1.jpg");
+}
+
 .stat-container {
     float: left;
     margin: 5px;
     padding: 5px;
     /* border: 2px solid black; */
 }
+

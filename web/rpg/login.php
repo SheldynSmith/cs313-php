@@ -15,6 +15,7 @@ $_SESSION["userID"] = NULL;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/sheet.css">
     <title>Pathfinder Character Sheet - Login</title>
 </head>
 <body>

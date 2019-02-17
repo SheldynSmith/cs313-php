@@ -33,6 +33,9 @@ $statement->execute();
     <h2>Welcome <?php echo htmlspecialchars($_SESSION["username"])?></h2>
     <h3>Characters</h3>
     <ul>
+        <form action="newSheet.php">
+            <input type="submit" value="Create a New Character">
+        </form>
         <?php
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                 $charName = $row["charactername"];

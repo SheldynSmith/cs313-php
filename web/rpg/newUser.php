@@ -9,7 +9,7 @@
             var password1 = document.forms["sign-up"]["password"].value;
             var password2 = document.forms["sign-up"]["password-confirm"].value;
             var username = document.forms["sign-up"]["username"].value;
-            var warning = document.getElementByID("not-matched");
+            var warning = document.getElementById("not-matched");
 
             if(password1 !== password2) {
                 warning.visibility = "visible";

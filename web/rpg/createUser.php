@@ -7,7 +7,7 @@
     $passwordHash = password_hash($password, PASSWORD_BCRYPT);
     
     $statement = $db->prepare("INSERT INTO usertable (username, passwordhash)
-                               VALUES :cleanUsername, :cleanPasswordHash");
+                               VALUES (:cleanUsername, :cleanPasswordHash)");
     $statement->bindValue(":cleanUsername", $userName, PDO::PARAM_STR);
     $statement->bindValue(":cleanPasswordHash", $password, PDO::PARAM_STR);
     $statement->execute();

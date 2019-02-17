@@ -28,6 +28,7 @@ $_SESSION["characterID"] = NULL;
         <?php
             if($_SESSION["retryLogin"] == TRUE) {
                 echo "<span style=\"color: red\">Username and password did not match</span>";
+                $_SESSION["retryLogin"] = FALSE;
             }
         ?>
     </form><br>

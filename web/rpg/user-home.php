@@ -30,24 +30,27 @@ $statement->execute();
     <title>Home</title>
 </head>
 <body>
-    <h1>Pathfinder Character Sheets</h1>
-    <h2>Welcome <?php echo htmlspecialchars($_SESSION["username"])?></h2>
-    <h3>Characters</h3>
-    <ul>
-        <form action="newSheet.php">
-            <input type="submit" value="Create a New Character">
-        </form>
-        <?php
-            while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                $charName = $row["charactername"];
-                $charClass = $row["characterclass"];
-                $level = $row["characterlevel"];
-                $charRace = $row["characterrace"];
-                $id = $row["id"];
+    <div id="content">
+        <h1>Pathfinder Character Sheets</h1>
+        <h2>Welcome <?php echo htmlspecialchars($_SESSION["username"])?></h2>
+        <h3>Characters</h3>
+        <ul>
+            <form action="newSheet.php">
+                <input type="submit" value="Create a New Character">
+            </form>
+            <?php
+                while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                    $charName = $row["charactername"];
+                    $charClass = $row["characterclass"];
+                    $level = $row["characterlevel"];
+                    $charRace = $row["characterrace"];
+                    $id = $row["id"];
 
-                echo "<li><a href=\"sheet.php?id=$id\">View</a> $charName the level $level $charRace $charClass</li>";
-            }
-            echo "</ul>";
-        ?>
+                    echo "<li><a href=\"sheet.php?id=$id\">View</a> $charName the level $level $charRace $charClass</li>";
+                }
+                // echo "</ul>";
+            ?>
+        </ul>
+    </div>
 </body>
 </html>

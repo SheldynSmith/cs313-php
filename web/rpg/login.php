@@ -19,21 +19,23 @@ $_SESSION["userID"] = NULL;
     <title>Pathfinder Character Sheet - Login</title>
 </head>
 <body>
-    <h1>Pathfinder Character Sheet</h1>
-    <h3>Login</h3>
-    <form id="login" method="POST" action="user-auth.php">
-        <label>Username:</label><br>
-        <input type="text" name="username"><br>
-        <label>Password:</label><br>
-        <input type="password" name="password"><br><br>
-        <input type="submit" name="submit" value="Sign In"><br>
-        <?php
-            if($_SESSION["retryLogin"] == TRUE) {
-                echo "<span style=\"color: red\">Invalid username or password</span>";
-                $_SESSION["retryLogin"] = FALSE;
-            }
-        ?>
-    </form><br>
-    <a href="newUser.php">Create a new account</a>
+    <div id="content">
+        <h1>Pathfinder Character Sheet</h1>
+        <h3>Login</h3>
+        <form id="login" method="POST" action="user-auth.php">
+            <label>Username:</label><br>
+            <input type="text" name="username"><br>
+            <label>Password:</label><br>
+            <input type="password" name="password"><br><br>
+            <input type="submit" name="submit" value="Sign In"><br>
+            <?php
+                if($_SESSION["retryLogin"] == TRUE) {
+                    echo "<span style=\"color: red\">Invalid username or password</span>";
+                    $_SESSION["retryLogin"] = FALSE;
+                }
+            ?>
+        </form><br>
+        <a href="newUser.php">Create a new account</a>
+    </div>
 </body>
 </html>

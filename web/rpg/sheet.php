@@ -43,9 +43,7 @@ $stats = json_decode($jsonString, false);
 <body>
     <div id="content">
         <h1>Pathfinder Character Sheet</h1>
-        <form action="logout.php">
-            <button id="logout-button" type="submit" value="Logout">
-        </form>
+        <a href="logout.php" class="button">Logout</a>
         <form action="saveSheet.php" method="POST">
             <input type="submit" id="save-sheet" value="Save">
             <div id="general" class="stat-section">

@@ -33,9 +33,7 @@ $statement->execute();
     <div id="content">
         <h1>Pathfinder Character Sheets</h1>
         <h2>Welcome <?php echo htmlspecialchars($_SESSION["username"])?></h2>
-        <form action="logout.php">
-            <button id="logout-button" type="submit" value="Logout">
-        </form>
+        <a href="logout.php" class="button">Logout</a>
         <h3>Characters</h3>
         <ul>
             <form action="newSheet.php">

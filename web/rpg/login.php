@@ -29,7 +29,7 @@ $_SESSION["userID"] = NULL;
         <input type="submit" name="submit" value="Sign In"><br>
         <?php
             if($_SESSION["retryLogin"] == TRUE) {
-                echo "<span style=\"color: red\">Username and password did not match</span>";
+                echo "<span style=\"color: red\">Invalid username or password</span>";
                 $_SESSION["retryLogin"] = FALSE;
             }
         ?>

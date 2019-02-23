@@ -41,113 +41,115 @@ $stats = json_decode($jsonString, false);
     <title>Pathfinder Character Sheet</title>
 </head>
 <body>
-    <h1>Pathfinder Character Sheet</h1>
-    <form action="saveSheet.php" method="POST">
-        <input type="submit" id="save-sheet" value="Save">
-        <div id="general" class="stat-section">
-            <h2>General</h2>
-            <div id="character-name" class="stat-container">
-                <label>Character name</label><br>
-                <input type="text" name="character-name" value="<?php echo $row["charactername"]?>">
-            </div>
-            <div id="alignment" class="stat-container">
-                <label>Alignment</label><br>
-                <input type="text" name="alignment" value="<?php echo $stats->{"alignment"}?>">
-            </div>
-            <div id="player-name" class="stat-container">
-                <label>Player Name</label><br>
-                <input type="text" name="player-name" value="<?php echo $stats->{"player-name"}?>">
-            </div>
-            <div id="character-class" class="stat-container">
-                <label>Character Class</label><br>
-                <input type="text" name="character-class" value="<?php echo $stats->{"character-class"}?>">               
-            </div>
-            <div id="level" class="stat-container">
-                <label>Level</label><br>
-                <select name="level">
-                    <?php
-                        for ($i = 1; $i <= 20; $i++) {
-                            echo "<option value=\"$i\"";
-                            if($i == $stats->{"level"}) {
-                                echo " selected";
+    <div id="content">
+        <h1>Pathfinder Character Sheet</h1>
+        <form action="saveSheet.php" method="POST">
+            <input type="submit" id="save-sheet" value="Save">
+            <div id="general" class="stat-section">
+                <h2>General</h2>
+                <div id="character-name" class="stat-container">
+                    <label>Character name</label><br>
+                    <input type="text" name="character-name" value="<?php echo $row["charactername"]?>">
+                </div>
+                <div id="alignment" class="stat-container">
+                    <label>Alignment</label><br>
+                    <input type="text" name="alignment" value="<?php echo $stats->{"alignment"}?>">
+                </div>
+                <div id="player-name" class="stat-container">
+                    <label>Player Name</label><br>
+                    <input type="text" name="player-name" value="<?php echo $stats->{"player-name"}?>">
+                </div>
+                <div id="character-class" class="stat-container">
+                    <label>Character Class</label><br>
+                    <input type="text" name="character-class" value="<?php echo $stats->{"character-class"}?>">               
+                </div>
+                <div id="level" class="stat-container">
+                    <label>Level</label><br>
+                    <select name="level">
+                        <?php
+                            for ($i = 1; $i <= 20; $i++) {
+                                echo "<option value=\"$i\"";
+                                if($i == $stats->{"level"}) {
+                                    echo " selected";
+                                }
+                                echo ">$i</option>";
                             }
-                            echo ">$i</option>";
+                        ?>
+                    </select>
+                </div>
+                <div id="deity" class="stat-container">
+                    <label>Deity</label><br>
+                    <input type="text" name="deity" value="<?php echo $stats->{"deity"}?>">
+                </div>
+                <div id="homeland" class="stat-container">
+                    <label>Homeland</label><br>
+                    <input type="text" name="homeland"  value="<?php echo $stats->{"homeland"}?>">
+                </div>
+                <div id="race" class="stat-container">
+                    <label>Race</label><br>
+                    <input type="text" name="race" value="<?php echo $stats->{"race"}?>">
+                </div>
+                <div id="size" class="stat-container">
+                    <label>Size</label><br>
+                    <select name="size">
+                        <option value="Small"
+                        <?php
+                        if($stats->{"size"} == "Small") {
+                            echo "selected";
                         }
-                    ?>
-                </select>
-            </div>
-            <div id="deity" class="stat-container">
-                <label>Deity</label><br>
-                <input type="text" name="deity" value="<?php echo $stats->{"deity"}?>">
-            </div>
-            <div id="homeland" class="stat-container">
-                <label>Homeland</label><br>
-                <input type="text" name="homeland"  value="<?php echo $stats->{"homeland"}?>">
-            </div>
-            <div id="race" class="stat-container">
-                <label>Race</label><br>
-                <input type="text" name="race" value="<?php echo $stats->{"race"}?>">
-            </div>
-            <div id="size" class="stat-container">
-                <label>Size</label><br>
-                <select name="size">
-                    <option value="Small"
-                    <?php
-                    if($stats->{"size"} == "Small") {
-                        echo "selected";
-                    }
-                    ?>
-                    >Small</option>
-                    <option value="Medium"
-                    <?php
-                    if($stats->{"size"} == "Medium") {
-                        echo "selected";
-                    }
-                    ?>
-                    >Medium</option>
-                </select>
-            </div>
-            <div id="gender" class="stat-container">
-                <label>Gender</label><br>
-                <select name="gender">
-                    <option value="Male"
-                    <?php
-                    if($stats->{"gender"} == "Male") {
-                        echo "selected";
-                    }
-                    ?>
-                    >Male</option>
-                    <option value="Female"
-                    <?php
-                    if($stats->{"gender"} == "Female") {
-                        echo "selected";
-                    }
-                    ?>
-                    >Female</option>
-                </select>
-            </div>
-            <div id="age" class="stat-container">
-                <label>Age</label><br>
-                <input type="text" name="age" value="<?php echo $stats->{"age"}?>">
-            </div>
-            <div id="Height" class="stat-container">
-                <label>Height</label><br>
-                <input type="text" name="height" value="<?php echo $stats->{"height"}?>">
-            </div>
-            <div id="weight" class="stat-container">
-                <label>Weight</label><br>
-                <input type="text" name="weight" value="<?php echo $stats->{"weight"}?>">
-            </div>
-            <div id="hair" class="stat-container">
-                <label>Hair Color</label><br>
-                <input type="text" name="hair" value="<?php echo $stats->{"hair"}?>">
-            </div>
-            <div id="eyes" class="stat-container">
-                <label>Eye Color</label><br>
-                <input type="text" name="eyes" value="<?php echo $stats->{"eyes"}?>">
-            </div>
-        </div> <!--general section-->
+                        ?>
+                        >Small</option>
+                        <option value="Medium"
+                        <?php
+                        if($stats->{"size"} == "Medium") {
+                            echo "selected";
+                        }
+                        ?>
+                        >Medium</option>
+                    </select>
+                </div>
+                <div id="gender" class="stat-container">
+                    <label>Gender</label><br>
+                    <select name="gender">
+                        <option value="Male"
+                        <?php
+                        if($stats->{"gender"} == "Male") {
+                            echo "selected";
+                        }
+                        ?>
+                        >Male</option>
+                        <option value="Female"
+                        <?php
+                        if($stats->{"gender"} == "Female") {
+                            echo "selected";
+                        }
+                        ?>
+                        >Female</option>
+                    </select>
+                </div>
+                <div id="age" class="stat-container">
+                    <label>Age</label><br>
+                    <input type="text" name="age" value="<?php echo $stats->{"age"}?>">
+                </div>
+                <div id="Height" class="stat-container">
+                    <label>Height</label><br>
+                    <input type="text" name="height" value="<?php echo $stats->{"height"}?>">
+                </div>
+                <div id="weight" class="stat-container">
+                    <label>Weight</label><br>
+                    <input type="text" name="weight" value="<?php echo $stats->{"weight"}?>">
+                </div>
+                <div id="hair" class="stat-container">
+                    <label>Hair Color</label><br>
+                    <input type="text" name="hair" value="<?php echo $stats->{"hair"}?>">
+                </div>
+                <div id="eyes" class="stat-container">
+                    <label>Eye Color</label><br>
+                    <input type="text" name="eyes" value="<?php echo $stats->{"eyes"}?>">
+                </div>
+            </div> <!--general section-->
 
-    </form>
+        </form>
+    </div>
 </body>
 </html>

@@ -264,6 +264,37 @@ $stats = json_decode($jsonString, false);
                         <label>Total</label><br>
                         <input type="text" name="ac-total" maxlength="4" size="4" value="<?php echo $stats->{"ac-total"}?>">
                     </div>
+                    <div id="plus-10" class="defense-grid">
+                        <label>10+</label>
+                    </div>
+                    <div id="armor-bonus" class="defense-grid">
+                        <label>Armor Bonus</label><br>
+                        <input type="text" name="armor-bonus" maxlength="4" size="4" value="<?php echo $stats->{"armor-bonus"}?>">
+                    </div>
+                    <div id="shield-bonus" class="defense-grid">
+                        <label>Shield Bonus</label><br>
+                        <input type="text" name="shield-bonus" maxlength="4" size="4" value="<?php echo $stats->{"shield-bonus"}?>">
+                    </div>
+                    <div id="ac-dex-mod" class="defense-grid">
+                        <label>Dex Modifier</label><br>
+                        <input type="text" name="ac-dex-mod" maxlength="4" size="4" value="<?php echo $stats->{"ac-dex-mod"}?>">
+                    </div>
+                    <div id="size-mod" class="defense-grid">
+                        <label>Size Modifier</label><br>
+                        <input type="text" name="size-mod" maxlength="4" size="4" value="<?php echo $stats->{"size-mod"}?>">
+                    </div>
+                    <div id="natural-armor" class="defense-grid">
+                        <label>Natural Armor</label><br>
+                        <input type="text" name="natural-armor" maxlength="4" size="4" value="<?php echo $stats->{"natural-armor"}?>">
+                    </div>
+                    <div id="deflection" class="defense-grid">
+                        <label>Deflection</label><br>
+                        <input type="text" name="deflection" maxlength="4" size="4" value="<?php echo $stats->{"deflection"}?>">
+                    </div>
+                    <div id="ac-misc-mod" class="defense-grid10-12">
+                        <label>Misc Modifier</label><br>
+                        <input type="text" name="ac-misc-mod" maxlength="4" size="4" value="<?php echo $stats->{"ac-misc-mod"}?>">
+                    </div>
                 </div>
             </div>
         </form>

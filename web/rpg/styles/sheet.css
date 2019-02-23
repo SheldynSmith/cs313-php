@@ -70,3 +70,8 @@ a.button {
     width: 50%;
     margin-right: 10px
 }
+
+.defense-grid10-12 {
+    grid-column-start: 10;
+    grid-column-end: 13;
+}

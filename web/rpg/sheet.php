@@ -59,6 +59,10 @@ $stats = json_decode($jsonString, false);
                     <label>Player Name</label><br>
                     <input type="text" name="player-name" value="<?php echo $stats->{"player-name"}?>">
                 </div>
+                <div id="race" class="stat-container">
+                    <label>Race</label><br>
+                    <input type="text" name="race" value="<?php echo $stats->{"race"}?>">
+                </div>
                 <div id="character-class" class="stat-container">
                     <label>Character Class</label><br>
                     <input type="text" name="character-class" value="<?php echo $stats->{"character-class"}?>">               
@@ -84,11 +88,7 @@ $stats = json_decode($jsonString, false);
                 <div id="homeland" class="stat-container">
                     <label>Homeland</label><br>
                     <input type="text" name="homeland"  value="<?php echo $stats->{"homeland"}?>">
-                </div>
-                <div id="race" class="stat-container">
-                    <label>Race</label><br>
-                    <input type="text" name="race" value="<?php echo $stats->{"race"}?>">
-                </div>
+                </div>              
                 <div id="size" class="stat-container">
                     <label>Size</label><br>
                     <select name="size">

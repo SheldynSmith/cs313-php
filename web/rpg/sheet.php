@@ -293,7 +293,7 @@ $stats = json_decode($jsonString, false);
                     </div>
                     <div id="ac-misc-mod" class="defense-grid10-16">
                         <label>Misc Modifier</label><br>
-                        <input type="text" name="ac-misc-mod" maxlength="4" size="10" value="<?php echo $stats->{"ac-misc-mod"}?>">
+                        <input type="text" name="ac-misc-mod" maxlength="4" size="15" value="<?php echo $stats->{"ac-misc-mod"}?>">
                     </div>
                 </div>
             </div>

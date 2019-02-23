@@ -203,7 +203,57 @@ $stats = json_decode($jsonString, false);
                         <label>Temp Modifier</label><br>
                         <input type="text" name="con-temp-mod" maxlength="4" size="4" value="<?php echo $stats->{"con-temp-mod"}?>">
                     </div>
-                    
+                    <div class="ability-grid ability-label">INT</div>
+                    <div id="int-score" class="ability-grid">
+                        <label>Ability Score</label><br>
+                        <input type="text" name="int-score" maxlength="4" size="4" value="<?php echo $stats->{"int-score"}?>">
+                    </div>
+                    <div id="int-mod" class="ability-grid">
+                        <label>Ability Modifier</label><br>
+                        <input type="text" name="int-mod" maxlength="4" size="4" value="<?php echo $stats->{"int-mod"}?>">
+                    </div>
+                    <div id="int-temp-score" class="ability-grid">
+                        <label>Temp Score</label><br>
+                        <input type="text" name="int-temp-score" maxlength="4" size="4" value="<?php echo $stats->{"int-temp-score"}?>">
+                    </div>
+                    <div id="int-temp-mod" class="ability-grid">
+                        <label>Temp Modifier</label><br>
+                        <input type="text" name="int-temp-mod" maxlength="4" size="4" value="<?php echo $stats->{"int-temp-mod"}?>">
+                    </div>
+                    <div class="ability-grid ability-label">WIS</div>
+                    <div id="wis-score" class="ability-grid">
+                        <label>Ability Score</label><br>
+                        <input type="text" name="wis-score" maxlength="4" size="4" value="<?php echo $stats->{"wis-score"}?>">
+                    </div>
+                    <div id="wis-mod" class="ability-grid">
+                        <label>Ability Modifier</label><br>
+                        <input type="text" name="wis-mod" maxlength="4" size="4" value="<?php echo $stats->{"wis-mod"}?>">
+                    </div>
+                    <div id="wis-temp-score" class="ability-grid">
+                        <label>Temp Score</label><br>
+                        <input type="text" name="wis-temp-score" maxlength="4" size="4" value="<?php echo $stats->{"wis-temp-score"}?>">
+                    </div>
+                    <div id="wis-temp-mod" class="ability-grid">
+                        <label>Temp Modifier</label><br>
+                        <input type="text" name="wis-temp-mod" maxlength="4" size="4" value="<?php echo $stats->{"wis-temp-mod"}?>">
+                    </div>
+                    <div class="ability-grid ability-label">CHA</div>
+                    <div id="cha-score" class="ability-grid">
+                        <label>Ability Score</label><br>
+                        <input type="text" name="cha-score" maxlength="4" size="4" value="<?php echo $stats->{"cha-score"}?>">
+                    </div>
+                    <div id="cha-mod" class="ability-grid">
+                        <label>Ability Modifier</label><br>
+                        <input type="text" name="cha-mod" maxlength="4" size="4" value="<?php echo $stats->{"cha-mod"}?>">
+                    </div>
+                    <div id="cha-temp-score" class="ability-grid">
+                        <label>Temp Score</label><br>
+                        <input type="text" name="cha-temp-score" maxlength="4" size="4" value="<?php echo $stats->{"cha-temp-score"}?>">
+                    </div>
+                    <div id="cha-temp-mod" class="ability-grid">
+                        <label>Temp Modifier</label><br>
+                        <input type="text" name="cha-temp-mod" maxlength="4" size="4" value="<?php echo $stats->{"cha-temp-mod"}?>">
+                    </div>
                 </div>
             </div> <!--ability section-->
         </form>

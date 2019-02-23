@@ -150,23 +150,26 @@ $stats = json_decode($jsonString, false);
             </div> <!--general section-->
             <div id="abilities" class="stat-section">
                 <h2>Abilities</h2>
-                <div class="ability-grid">STR</div>
-                <div id="str-score" class="ability-grid">
-                    <label>Ability Score</label><br>
-                    <input type="text" name="str-score" value="<?php echo $stats->{"str-score"}?>">
+                <div class="ability-grid-container">
+                    <div class="ability-grid">STR</div>
+                    <div id="str-score" class="ability-grid">
+                        <label>Ability Score</label><br>
+                        <input type="text" name="str-score" maxlength="4" size="4" value="<?php echo $stats->{"str-score"}?>">
+                    </div>
+                    <div id="str-mod" class="ability-grid">
+                        <label>Ability Modifier</label><br>
+                        <input type="text" name="str-mod" maxlength="4" size="4" value="<?php echo $stats->{"str-mod"}?>">
+                    </div>
+                    <div id="str-temp-score" class="ability-grid">
+                        <label>Ability Temp Score</label><br>
+                        <input type="text" name="str-temp-score" maxlength="4" size="4" value="<?php echo $stats->{"str-temp-score"}?>">
+                    </div>
+                    <div id="str-temp-mod" class="ability-grid">
+                        <label>Ability Temp Modifier</label><br>
+                        <input type="text" name="str-temp-mod" maxlength="4" size="4" value="<?php echo $stats->{"str-temp-mod"}?>">
+                    </div>
                 </div>
-                <div id="str-mod" class="ability-grid">
-                    <label>Ability Modifier</label><br>
-                    <input type="text" name="str-mod" value="<?php echo $stats->{"str-mod"}?>">
-                </div>
-                <div id="str-temp-score" class="ability-grid">
-                    <label>Ability Temp Score</label><br>
-                    <input type="text" name="str-temp-score" value="<?php echo $stats->{"str-temp-score"}?>">
-                </div>
-                <div id="str-temp-mod" class="ability-grid">
-                    <label>Ability Temp Modifier</label><br>
-                    <input type="text" name="str-temp-mod" value="<?php echo $stats->{"str-temp-mod"}?>">
-                </div>
+            </div> <!--ability section-->
         </form>
     </div>
 </body>

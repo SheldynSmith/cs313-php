@@ -5,30 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/sheet.css">
-    <script>
-        function validateForm() {
-            var password1 = document.forms["sign-up"]["password"].value;
-            var password2 = document.forms["sign-up"]["password-confirm"].value;
-            var username = document.forms["sign-up"]["username"].value;
-            var warning = document.getElementById("not-matched");
-
-            if(password1 !== password2) {
-                warning.visibility = "visible";
-                warning.innerHTML = "Passwords must be the same"
-                return false;
-            }
-            else if(username == "") {
-                warning.visibility = "visible";
-                warning.innerHTML = "Username must not be blank"
-                return false;
-            }
-            else if(password1 == "" || password2 == "") {
-                warning.visibility = "visible";
-                warning.innerHTML = "Password must not be blank"
-                return false;
-            }
-        }
-    </script>
+    <script src="validateScript.js"></script>
     <title>Pathfinder Character Sheet - New User</title>
 </head>
 <body>

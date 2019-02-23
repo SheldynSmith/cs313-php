@@ -203,6 +203,7 @@ $stats = json_decode($jsonString, false);
                         <label>Temp Modifier</label><br>
                         <input type="text" name="con-temp-mod" maxlength="4" size="4" value="<?php echo $stats->{"con-temp-mod"}?>">
                     </div>
+                    <br><br>
                     <div class="ability-grid ability-label">INT</div>
                     <div id="int-score" class="ability-grid">
                         <label>Ability Score</label><br>

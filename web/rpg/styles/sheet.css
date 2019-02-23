@@ -55,3 +55,10 @@ a.button {
     padding: 3px;
     float:right;
 }
+
+.defense-grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+    padding: 10px;
+    grid-row-gap: 5px;
+}

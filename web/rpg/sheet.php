@@ -256,6 +256,16 @@ $stats = json_decode($jsonString, false);
                     </div>
                 </div>
             </div> <!--ability section-->
+            <div id="defense" class="stat-section">
+                <h2>Defense</h2>
+                <div class="defense-grid-container">
+                    <div class="defense-grid defense-label">AC</div>
+                    <div id="ac-total" class="defense-grid">
+                        <label>Total</label><br>
+                        <input type="text" name="ac-total" maxlength="4" size="4" value="<?php echo $stats->{"ac-total"}?>">
+                    </div>
+                </div>
+            </div>
         </form>
     </div>
 </body>

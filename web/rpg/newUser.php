@@ -32,17 +32,19 @@
     <title>Pathfinder Character Sheet - New User</title>
 </head>
 <body>
-    <h1>Pathfinder Character Sheet</h1>
-    <h3>Enter a new username and password</h3>
-    <form id="sign-up" method="POST" action="createUser.php" onsubmit="return validateForm()">
-        <label>Username:</label><br>
-        <input type="text" name="username"><br><br>
-        <label>Password:</label><br>
-        <input type="password" name="password"><br>
-        <label>Confirm Password:</label><br>
-        <input type="password" name="password-confirm"><br><br>
-        <input type="submit" name="submit" value="Sign Up"><br><br>
-        <div id="not-matched" style="color:red" visibility="hidden"></div>
-    </form>
+    <div id="content">
+        <h1>Pathfinder Character Sheet</h1>
+        <h3>Enter a new username and password</h3>
+        <form id="sign-up" method="POST" action="createUser.php" onsubmit="return validateForm()">
+            <label>Username:</label><br>
+            <input type="text" name="username"><br><br>
+            <label>Password:</label><br>
+            <input type="password" name="password"><br>
+            <label>Confirm Password:</label><br>
+            <input type="password" name="password-confirm"><br><br>
+            <input type="submit" name="submit" value="Sign Up"><br><br>
+            <div id="not-matched" style="color:red" visibility="hidden"></div>
+        </form>
+    </div>
 </body>
 </html>

@@ -161,13 +161,48 @@ $stats = json_decode($jsonString, false);
                         <input type="text" name="str-mod" maxlength="4" size="4" value="<?php echo $stats->{"str-mod"}?>">
                     </div>
                     <div id="str-temp-score" class="ability-grid">
-                        <label>Ability Temp Score</label><br>
+                        <label>Temp Score</label><br>
                         <input type="text" name="str-temp-score" maxlength="4" size="4" value="<?php echo $stats->{"str-temp-score"}?>">
                     </div>
                     <div id="str-temp-mod" class="ability-grid">
-                        <label>Ability Temp Modifier</label><br>
+                        <label>Temp Modifier</label><br>
                         <input type="text" name="str-temp-mod" maxlength="4" size="4" value="<?php echo $stats->{"str-temp-mod"}?>">
                     </div>
+                    <div class="ability-grid">DEX</div>
+                    <div id="dex-score" class="ability-grid">
+                        <label>Ability Score</label><br>
+                        <input type="text" name="dex-score" maxlength="4" size="4" value="<?php echo $stats->{"dex-score"}?>">
+                    </div>
+                    <div id="dex-mod" class="ability-grid">
+                        <label>Ability Modifier</label><br>
+                        <input type="text" name="dex-mod" maxlength="4" size="4" value="<?php echo $stats->{"dex-mod"}?>">
+                    </div>
+                    <div id="dex-temp-score" class="ability-grid">
+                        <label>Temp Score</label><br>
+                        <input type="text" name="dex-temp-score" maxlength="4" size="4" value="<?php echo $stats->{"dex-temp-score"}?>">
+                    </div>
+                    <div id="dex-temp-mod" class="ability-grid">
+                        <label>Temp Modifier</label><br>
+                        <input type="text" name="dex-temp-mod" maxlength="4" size="4" value="<?php echo $stats->{"dex-temp-mod"}?>">
+                    </div>
+                    <div class="ability-grid">CON</div>
+                    <div id="con-score" class="ability-grid">
+                        <label>Ability Score</label><br>
+                        <input type="text" name="con-score" maxlength="4" size="4" value="<?php echo $stats->{"con-score"}?>">
+                    </div>
+                    <div id="con-mod" class="ability-grid">
+                        <label>Ability Modifier</label><br>
+                        <input type="text" name="con-mod" maxlength="4" size="4" value="<?php echo $stats->{"con-mod"}?>">
+                    </div>
+                    <div id="con-temp-score" class="ability-grid">
+                        <label>Temp Score</label><br>
+                        <input type="text" name="con-temp-score" maxlength="4" size="4" value="<?php echo $stats->{"con-temp-score"}?>">
+                    </div>
+                    <div id="con-temp-mod" class="ability-grid">
+                        <label>Temp Modifier</label><br>
+                        <input type="text" name="con-temp-mod" maxlength="4" size="4" value="<?php echo $stats->{"con-temp-mod"}?>">
+                    </div>
+                    
                 </div>
             </div> <!--ability section-->
         </form>

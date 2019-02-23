@@ -51,4 +51,6 @@ a.button {
 
     text-decoration: none;
     color: initial;
+    padding: 3px;
+    float:right;
 }

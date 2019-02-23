@@ -30,6 +30,9 @@ body {
 .ability-label {
     background-color: black;
     color: white;
+    padding: 20px 15px;
+    width: 50%;
+    margin-right: 10px
 }
   
 .grid-item {

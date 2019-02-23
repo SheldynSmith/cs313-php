@@ -151,7 +151,7 @@ $stats = json_decode($jsonString, false);
             <div id="abilities" class="stat-section">
                 <h2>Abilities</h2>
                 <div class="ability-grid-container">
-                    <div class="ability-grid">STR</div>
+                    <div class="ability-grid ability-label">STR</div>
                     <div id="str-score" class="ability-grid">
                         <label>Ability Score</label><br>
                         <input type="text" name="str-score" maxlength="4" size="4" value="<?php echo $stats->{"str-score"}?>">
@@ -168,7 +168,7 @@ $stats = json_decode($jsonString, false);
                         <label>Temp Modifier</label><br>
                         <input type="text" name="str-temp-mod" maxlength="4" size="4" value="<?php echo $stats->{"str-temp-mod"}?>">
                     </div>
-                    <div class="ability-grid">DEX</div>
+                    <div class="ability-grid ability-label">DEX</div>
                     <div id="dex-score" class="ability-grid">
                         <label>Ability Score</label><br>
                         <input type="text" name="dex-score" maxlength="4" size="4" value="<?php echo $stats->{"dex-score"}?>">
@@ -185,7 +185,7 @@ $stats = json_decode($jsonString, false);
                         <label>Temp Modifier</label><br>
                         <input type="text" name="dex-temp-mod" maxlength="4" size="4" value="<?php echo $stats->{"dex-temp-mod"}?>">
                     </div>
-                    <div class="ability-grid">CON</div>
+                    <div class="ability-grid ability-label">CON</div>
                     <div id="con-score" class="ability-grid">
                         <label>Ability Score</label><br>
                         <input type="text" name="con-score" maxlength="4" size="4" value="<?php echo $stats->{"con-score"}?>">

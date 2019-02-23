@@ -26,6 +26,11 @@ body {
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
     padding: 10px;
   }
+
+.ability-label {
+    background-color: black;
+    color: white;
+}
   
 .grid-item {
     padding: 20px;

@@ -319,15 +319,15 @@ $stats = json_decode($jsonString, false);
                     </div>
                     <div id="non-leathal" class="defense-grid5-7">
                         <label>Non-Leathal Damage</label><br>
-                        <input type="text" name="non-leathal" maxlength="8" size="8" value="<?php echo $stats->{"non-leathal"}?>">
+                        <input type="text" name="non-leathal" maxlength="8" size="16" value="<?php echo $stats->{"non-leathal"}?>">
                     </div>
                     <div id="dr" class="defense-grid7-9">
                         <label>Damage Reduction</label><br>
-                        <input type="text" name="dr" maxlength="8" size="8" value="<?php echo $stats->{"dr"}?>">
+                        <input type="text" name="dr" maxlength="8" size="16 value="<?php echo $stats->{"dr"}?>">
                     </div>
                     <div id="sr" class="defense-grid9-11">
                         <label>Spell Resistance</label><br>
-                        <input type="text" name="sr" maxlength="8" size="8" value="<?php echo $stats->{"sr"}?>">
+                        <input type="text" name="sr" maxlength="8" size="16" value="<?php echo $stats->{"sr"}?>">
                     </div>
                 </div>
             </div> <!-- defense section -->

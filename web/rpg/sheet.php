@@ -380,9 +380,9 @@ $stats = json_decode($jsonString, false);
                         <label>Type</label><br>
                         <input type="text" name="ranged-attack-type" maxlength="15" size="15" value="<?php echo $stats->{"ranged-attack-type"}?>">
                     </div>
-                    <div id="ranged-attack-notes" class="offence-grid">
-                        <label>Notes</label><br>
-                        <input type="text" name="ranged-attack-notes" maxlength="15" size="15" value="<?php echo $stats->{"ranged-attack-notes"}?>">
+                    <div id="ranged-attack-ammo" class="offence-grid">
+                        <label>Ammunition</label><br>
+                        <input type="text" name="ranged-attack-ammo" maxlength="15" size="15" value="<?php echo $stats->{"ranged-attack-ammo"}?>">
                     </div>
                 </div>
             </div>

@@ -100,3 +100,18 @@ a.button {
     grid-column-start: 9;
     grid-column-end: 11;
 }
+
+.offence-grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    padding: 10px;
+    grid-row-gap: 5px;
+}
+
+.offence-label {
+    background-color: black;
+    color: white;
+    padding: 20px 15px;
+    width: 50%;
+    margin-right: 10px
+}

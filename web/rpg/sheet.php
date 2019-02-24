@@ -330,6 +330,36 @@ $stats = json_decode($jsonString, false);
                         <input type="text" name="sr" maxlength="8" size="8" value="<?php echo $stats->{"sr"}?>">
                     </div>
                 </div>
+            </div> <!-- defense section -->
+            <div id="offence" class="stat-section">
+                <h2>Offence</h2>
+                <div class="offence-grid-container">
+                    <div class="offence-grid offence-label">Melee</div>
+                    <div id="melee-weapon" class="offence-grid">
+                        <label>Weapon</label><br>
+                        <input type="text" name="melee-weapon" maxlength="15" size="15" value="<?php echo $stats->{"melee-weapon"}?>">
+                    </div>
+                    <div id="melee-attack-bonus" class="offence-grid">
+                        <label>Attack Bonus</label><br>
+                        <input type="text" name="melee-attack-bonus" maxlength="15" size="15" value="<?php echo $stats->{"melee-attack-bonus"}?>">
+                    </div>
+                    <div id="melee-attack-damage" class="offence-grid">
+                        <label>Attack Damage</label><br>
+                        <input type="text" name="melee-attack-damage" maxlength="15" size="15" value="<?php echo $stats->{"melee-attack-damage"}?>">
+                    </div>
+                    <div id="melee-attack-critical" class="offence-grid">
+                        <label>Critical</label><br>
+                        <input type="text" name="melee-attack-critical" maxlength="15" size="15" value="<?php echo $stats->{"melee-attack-critical"}?>">
+                    </div>
+                    <div id="melee-attack-type" class="offence-grid">
+                        <label>Type</label><br>
+                        <input type="text" name="melee-attack-type" maxlength="15" size="15" value="<?php echo $stats->{"melee-attack-type"}?>">
+                    </div>
+                    <div id="melee-attack-notes" class="offence-grid">
+                        <label>Notes</label><br>
+                        <input type="text" name="melee-attack-notes" maxlength="15" size="15" value="<?php echo $stats->{"melee-attack-notes"}?>">
+                    </div>
+                </div>
             </div>
         </form>
     </div>

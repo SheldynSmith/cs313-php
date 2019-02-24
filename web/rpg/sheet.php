@@ -306,7 +306,7 @@ $stats = json_decode($jsonString, false);
                     </div>
                     <div id="other-ac-mod" class="defense-grid5-16">
                         <label>Other AC Modifiers</label><br>
-                        <input type="text" name="other-ac-mod" maxlength="75" size="75" value="<?php echo $stats->{"other-ac-mod"}?>">
+                        <input type="text" name="other-ac-mod" maxlength="65" size="65" value="<?php echo $stats->{"other-ac-mod"}?>">
                     </div>
                     <div class="defense-grid defense-label">Hit Points</div>
                     <div id="hp" class="defense-grid">

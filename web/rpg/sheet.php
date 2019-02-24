@@ -265,7 +265,7 @@ $stats = json_decode($jsonString, false);
                         <input type="text" name="ac-total" maxlength="4" size="4" value="<?php echo $stats->{"ac-total"}?>">
                     </div>
                     <div id="plus-10" class="defense-grid">
-                        <label>10+</label>
+                        <label id="base-ac">10+</label>
                     </div>
                     <div id="armor-bonus" class="defense-grid">
                         <label>Armor Bonus</label><br>

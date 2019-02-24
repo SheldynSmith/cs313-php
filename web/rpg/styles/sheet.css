@@ -75,6 +75,11 @@ a.button {
     margin-right: 10px
 }
 
+#base-ac {
+    padding: 20px 15px;
+    font-size: 20px;
+}
+
 .defense-grid10-16 {
     grid-column-start: 10;
     grid-column-end: 16;

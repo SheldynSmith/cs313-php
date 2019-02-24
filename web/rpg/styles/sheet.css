@@ -81,22 +81,22 @@ a.button {
     grid-column-end: 16;
 }
 
-.defense-grid3-7 {
+.defense-grid3-5 {
     grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.defense-grid5-7 {
+    grid-column-start: 5;
     grid-column-end: 7;
 }
 
-.defense-grid7-11 {
+.defense-grid7-9 {
     grid-column-start: 7;
+    grid-column-end: 9;
+}
+
+.defense-grid9-11 {
+    grid-column-start: 9;
     grid-column-end: 11;
-}
-
-.defense-grid11-14 {
-    grid-column-start: 11;
-    grid-column-end: 14;
-}
-
-.defense-grid14-16 {
-    grid-column-start: 14;
-    grid-column-end: 16;
 }

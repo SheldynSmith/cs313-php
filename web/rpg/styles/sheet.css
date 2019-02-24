@@ -75,3 +75,8 @@ a.button {
     grid-column-start: 10;
     grid-column-end: 16;
 }
+
+.defense-grid5-16 {
+    grid-column-start: 5;
+    grid-column-end: 16;
+}

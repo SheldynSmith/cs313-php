@@ -295,6 +295,20 @@ $stats = json_decode($jsonString, false);
                         <label>Misc Modifier</label><br>
                         <input type="text" name="ac-misc-mod" maxlength="4" size="15" value="<?php echo $stats->{"ac-misc-mod"}?>">
                     </div>
+                    <div class="defense-grid defense-label">Touch</div>
+                    <div id="touch" class="defense-grid">
+                        <label>Touch AC</label><br>
+                        <input type="text" name="touch" maxlength="4" size="4" value="<?php echo $stats->{"touch"}?>">
+                    </div>
+                    <div class="defense-grid defense-label">Flat-Footed</div>
+                    <div id="flat-footed" class="defense-grid">
+                        <label>Flat-Footed</label><br>
+                        <input type="text" name="flat-footed" maxlength="4" size="4" value="<?php echo $stats->{"flat-footed"}?>">
+                    </div>
+                    <div id="other-ac-mod" class="defense-grid5-16">
+                        <label>Other AC Modifiers</label><br>
+                        <input type="text" name="other-ac-mod" maxlength="50" size="50" value="<?php echo $stats->{"other-ac-mod"}?>">
+                    </div>
                 </div>
             </div>
         </form>

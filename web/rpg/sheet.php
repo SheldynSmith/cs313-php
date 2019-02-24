@@ -306,7 +306,28 @@ $stats = json_decode($jsonString, false);
                     </div>
                     <div id="other-ac-mod" class="defense-grid5-16">
                         <label>Other AC Modifiers</label><br>
-                        <input type="text" name="other-ac-mod" maxlength="65" size="70" value="<?php echo $stats->{"other-ac-mod"}?>">
+                        <input type="text" name="other-ac-mod" maxlength="75" size="75" value="<?php echo $stats->{"other-ac-mod"}?>">
+                    </div>
+                    <div class="defense-grid defense-label">Hit Points</div>
+                    <div id="hp" class="defense-grid">
+                        <label>HP Total</label><br>
+                        <input type="text" name="hp" maxlength="4" size="4" value="<?php echo $stats->{"hp"}?>">
+                    </div>
+                    <div id="current-hp" class="defense-grid3-7">
+                        <label>Current/Wounds</label><br>
+                        <input type="text" name="current-hp" maxlength="16" size="16" value="<?php echo $stats->{"current-hp"}?>">
+                    </div>
+                    <div id="non-leathal" class="defense-grid7-11">
+                        <label>Non-Leathal Damage</label><br>
+                        <input type="text" name="non-leathal" maxlength="8" size="8" value="<?php echo $stats->{"non-leathal"}?>">
+                    </div>
+                    <div id="dr" class="defense-grid11-14">
+                        <label>Damage Reduction</label><br>
+                        <input type="text" name="dr" maxlength="8" size="8" value="<?php echo $stats->{"dr"}?>">
+                    </div>
+                    <div id="sr" class="defense-grid14-16">
+                        <label>Spell Resistance</label><br>
+                        <input type="text" name="sr" maxlength="8" size="8" value="<?php echo $stats->{"sr"}?>">
                     </div>
                 </div>
             </div>

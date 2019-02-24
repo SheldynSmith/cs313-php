@@ -293,7 +293,7 @@ $stats = json_decode($jsonString, false);
                     </div>
                     <div id="ac-misc-mod" class="defense-grid10-16">
                         <label>Misc Modifier</label><br>
-                        <input type="text" name="ac-misc-mod" maxlength="4" size="15" value="<?php echo $stats->{"ac-misc-mod"}?>">
+                        <input type="text" name="ac-misc-mod" maxlength="4" size="10" value="<?php echo $stats->{"ac-misc-mod"}?>">
                     </div>
                     <div class="defense-grid defense-label">Touch</div>
                     <div id="touch" class="defense-grid">
@@ -358,6 +358,31 @@ $stats = json_decode($jsonString, false);
                     <div id="melee-attack-notes" class="offence-grid">
                         <label>Notes</label><br>
                         <input type="text" name="melee-attack-notes" maxlength="15" size="15" value="<?php echo $stats->{"melee-attack-notes"}?>">
+                    </div>
+                    <div class="offence-grid offence-label">Ranged</div>
+                    <div id="ranged-weapon" class="offence-grid">
+                        <label>Weapon</label><br>
+                        <input type="text" name="ranged-weapon" maxlength="15" size="15" value="<?php echo $stats->{"ranged-weapon"}?>">
+                    </div>
+                    <div id="ranged-attack-bonus" class="offence-grid">
+                        <label>Attack Bonus</label><br>
+                        <input type="text" name="ranged-attack-bonus" maxlength="15" size="15" value="<?php echo $stats->{"ranged-attack-bonus"}?>">
+                    </div>
+                    <div id="ranged-attack-damage" class="offence-grid">
+                        <label>Attack Damage</label><br>
+                        <input type="text" name="ranged-attack-damage" maxlength="15" size="15" value="<?php echo $stats->{"ranged-attack-damage"}?>">
+                    </div>
+                    <div id="ranged-attack-critical" class="offence-grid">
+                        <label>Critical</label><br>
+                        <input type="text" name="ranged-attack-critical" maxlength="15" size="15" value="<?php echo $stats->{"ranged-attack-critical"}?>">
+                    </div>
+                    <div id="ranged-attack-type" class="offence-grid">
+                        <label>Type</label><br>
+                        <input type="text" name="ranged-attack-type" maxlength="15" size="15" value="<?php echo $stats->{"ranged-attack-type"}?>">
+                    </div>
+                    <div id="ranged-attack-notes" class="offence-grid">
+                        <label>Notes</label><br>
+                        <input type="text" name="ranged-attack-notes" maxlength="15" size="15" value="<?php echo $stats->{"ranged-attack-notes"}?>">
                     </div>
                 </div>
             </div>

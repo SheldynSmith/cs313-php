@@ -269,27 +269,27 @@ $stats = json_decode($jsonString, false);
                     </div>
                     <div id="armor-bonus" class="defense-grid">
                         <label>Armor Bonus</label><br>
-                        <input type="text" name="armor-bonus" maxlength="4" size="4" value="<?php echo $stats->{"armor-bonus"}?>">
+                        <input type="text" name="armor-bonus" maxlength="4" size="6" value="<?php echo $stats->{"armor-bonus"}?>">
                     </div>
                     <div id="shield-bonus" class="defense-grid">
                         <label>Shield Bonus</label><br>
-                        <input type="text" name="shield-bonus" maxlength="4" size="4" value="<?php echo $stats->{"shield-bonus"}?>">
+                        <input type="text" name="shield-bonus" maxlength="4" size="6" value="<?php echo $stats->{"shield-bonus"}?>">
                     </div>
                     <div id="ac-dex-mod" class="defense-grid">
                         <label>Dex Modifier</label><br>
-                        <input type="text" name="ac-dex-mod" maxlength="4" size="4" value="<?php echo $stats->{"ac-dex-mod"}?>">
+                        <input type="text" name="ac-dex-mod" maxlength="4" size="6" value="<?php echo $stats->{"ac-dex-mod"}?>">
                     </div>
                     <div id="size-mod" class="defense-grid">
                         <label>Size Modifier</label><br>
-                        <input type="text" name="size-mod" maxlength="4" size="4" value="<?php echo $stats->{"size-mod"}?>">
+                        <input type="text" name="size-mod" maxlength="4" size="6" value="<?php echo $stats->{"size-mod"}?>">
                     </div>
                     <div id="natural-armor" class="defense-grid">
                         <label>Natural Armor</label><br>
-                        <input type="text" name="natural-armor" maxlength="4" size="4" value="<?php echo $stats->{"natural-armor"}?>">
+                        <input type="text" name="natural-armor" maxlength="4" size="6" value="<?php echo $stats->{"natural-armor"}?>">
                     </div>
                     <div id="deflection" class="defense-grid">
                         <label>Deflection</label><br>
-                        <input type="text" name="deflection" maxlength="4" size="4" value="<?php echo $stats->{"deflection"}?>">
+                        <input type="text" name="deflection" maxlength="4" size="6" value="<?php echo $stats->{"deflection"}?>">
                     </div>
                     <div id="ac-misc-mod" class="defense-grid10-16">
                         <label>Misc Modifier</label><br>
@@ -306,7 +306,7 @@ $stats = json_decode($jsonString, false);
                     </div>
                     <div id="other-ac-mod" class="defense-grid5-16">
                         <label>Other AC Modifiers</label><br>
-                        <input type="text" name="other-ac-mod" maxlength="65" size="65" value="<?php echo $stats->{"other-ac-mod"}?>">
+                        <input type="text" name="other-ac-mod" maxlength="65" size="70" value="<?php echo $stats->{"other-ac-mod"}?>">
                     </div>
                     <div class="defense-grid defense-label">Hit Points</div>
                     <div id="hp" class="defense-grid">

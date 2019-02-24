@@ -63,6 +63,10 @@ a.button {
     grid-row-gap: 5px;
 }
 
+.defense-grid {
+    padding: 0 5px;
+}
+
 .defense-label {
     background-color: black;
     color: white;
@@ -74,31 +78,37 @@ a.button {
 .defense-grid10-16 {
     grid-column-start: 10;
     grid-column-end: 16;
+    padding: 0 5px;
 }
 
 .defense-grid5-16 {
     grid-column-start: 5;
     grid-column-end: 16;
+    padding: 0 5px;
 }
 
 .defense-grid3-5 {
     grid-column-start: 3;
     grid-column-end: 5;
+    padding: 0 5px;
 }
 
 .defense-grid5-7 {
     grid-column-start: 5;
     grid-column-end: 7;
+    padding: 0 5px;
 }
 
 .defense-grid7-9 {
     grid-column-start: 7;
     grid-column-end: 9;
+    padding: 0 5px;
 }
 
 .defense-grid9-11 {
     grid-column-start: 9;
     grid-column-end: 11;
+    padding: 0 5px;
 }
 
 .offence-grid-container {

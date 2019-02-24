@@ -47,7 +47,7 @@ $statement->execute();
                     $charRace = $row["characterrace"];
                     $id = $row["id"];
 
-                    echo "<li><a href=\"sheet.php?id=$id\">View</a> <li><a href=\"deleteSheet.php?id=$id\">Delete</a> $charName the level $level $charRace $charClass</li>";
+                    echo "<li><a href=\"sheet.php?id=$id\">View</a> <a href=\"deleteSheet.php?id=$id\">Delete</a> $charName the level $level $charRace $charClass</li>";
                 }
                 // echo "</ul>";
             ?>
